@@ -64,12 +64,16 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
+					
 					"bundleName": "opensap.manageproducts.MaganeProducts.i18n.i18n"
 				}
 			},
 			"": {
 				"dataSource": "mainService",
-				"preload": true
+				"preload": true,
+				"settings": {
+					"defaultBindingMode": "TwoWay"
+				}
 			}
 		},
 		"routing": {
@@ -100,7 +104,13 @@
 					"target": [
 						"object"
 					]
+				},
+				{
+					"pattern" : "AddProduct",
+					"name" : "add",
+					"target" : "add"
 				}
+
 			],
 			"targets": {
 				"worklist": {
@@ -115,6 +125,12 @@
 					"viewLevel": 2,
 					"title": "{i18n>objectViewTitle}"
 				},
+				"add": {
+					"viewName": "Add",
+					"viewId": "add",
+					"viewLevel": 3
+				},
+
 				"objectNotFound": {
 					"viewName": "ObjectNotFound",
 					"viewId": "objectNotFound"

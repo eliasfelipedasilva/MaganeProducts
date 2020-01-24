@@ -209,7 +209,15 @@ sap.ui.define([
 			if (aTableSearchState.length !== 0) {
 				oViewModel.setProperty("/tableNoDataText", this.getResourceBundle().getText("worklistNoDataWithSearchText"));
 			}
-		}
+		},
+		/**
+			 * Event handler when the add button gets pressed
+			 * @public
+			 */
+			onAdd: function() {
+				this.getRouter().navTo("add");
+			}
+
 
 	});
 });

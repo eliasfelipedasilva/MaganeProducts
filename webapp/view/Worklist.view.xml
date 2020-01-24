@@ -78,12 +78,14 @@
 							id="searchField"
 							tooltip="{i18n>worklistSearchTooltip}"
 							search=".onSearch">
+						
 							<layoutData>
 								<OverflowToolbarLayoutData
 									maxWidth="200px"
 									priority="NeverOverflow"/>
 							</layoutData>
 						</SearchField>
+						<Button id="addButton" icon="sap-icon://add" press="onAdd" /> 
 					</OverflowToolbar>
 				</headerToolbar>
 
