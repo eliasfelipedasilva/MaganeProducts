@@ -1,0 +1,47 @@
+<mvc:View
+	controllerName="opensap.manageproducts.MaganeProducts.controller.Object"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:core="sap.ui.core">
+
+	<semantic:FullscreenPage
+		id="page"
+		navButtonPress="onNavBack"
+		showNavButton="true"
+		title="{i18n>objectTitle}"
+		busy="{objectView>/busy}"
+		busyIndicatorDelay="{objectView>/delay}">
+
+		<semantic:content>
+			<ObjectHeader
+				id="objectHeader"
+				title="{ProductID}"
+				titleActive="true"
+				titlePress="onShowDetailPopover"
+
+				responsive="true"
+				number="{
+					path: 'Price',
+					formatter: '.formatter.numberUnit'
+				}"
+				numberUnit="{CurrencyCode}">
+				<attributes>
+					<ObjectAttribute text="{Name}"/>
+				</attributes>
+			</ObjectHeader>
+
+			<mvc:XMLView viewName="opensap.manageproducts.MaganeProducts.view.ProductDetails"/>
+			
+			<core:Fragment fragmentName="opensap.manageproducts.MaganeProducts.view.SupplierInfo" type="XML"/>
+			
+ 		</semantic:content>
+
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+
+	</semantic:FullscreenPage>
+
+</mvc:View>
