@@ -15,6 +15,3 @@ For more information and documentation of all template features, please refer to
 https://sapui5.hana.ondemand.com/#/topic/a460a7348a6c431a8bd967ab9fb8d918
 
 #### Happy Development! ####
-
-
-:)))
